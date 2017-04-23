@@ -18,7 +18,7 @@ public class Main {
             accountList.add(new Account(i, AMOUNT));
         }
 
-        System.out.println("Before transactions: " + getTotalBalance(accountList));
+        Integer totalBalanceBeforeTransactions = getTotalBalance(accountList);
 
         TestBank bank = new TestBank();
 
@@ -47,8 +47,10 @@ public class Main {
 
         long passedTimeInSeconds = watch.time(TimeUnit.SECONDS);
 
-        System.out.println("After Transactions: " + getTotalBalance(accountList));
+        Integer totalBalanceAfterTransactions = getTotalBalance(accountList);
         System.out.println("passedTimeInSeconds: " + passedTimeInSeconds);
+        System.out.println("Before transactions: " + totalBalanceBeforeTransactions);
+        System.out.println("After Transactions : " + totalBalanceAfterTransactions);
 
     }
 
